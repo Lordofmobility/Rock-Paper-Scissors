@@ -27,6 +27,12 @@ function win(userChoice, computerChoice) {
 	userScore_span.innerHTML = userScore
 	computerScore_span.innerHTML = computerScore
 	result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord}. You win!🔥`
+	if (userScore === "10") {
+		alert("YOU HAVE WON THIS ROUND!!!🔥")
+	}
+	if (computerScore === "10") {
+		alert("You lost this round....😢")
+	}
 }
 
 function lose(userChoice, computerChoice) {
@@ -36,6 +42,12 @@ function lose(userChoice, computerChoice) {
 	userScore_span.innerHTML = userScore
 	computerScore_span.innerHTML = computerScore
 	result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(computerChoice)}${smallCompWord}. You lose...😢`
+	if (userScore === "10") {
+		window.alert("YOU HAVE WON THIS ROUND!!!🔥")
+	}
+	if (computerScore === "10") {
+		window.alert("You lost this round....😢")
+	}
 }
 
 function draw(userChoice, computerChoice) {
@@ -62,6 +74,12 @@ function game(userChoice) {
 		case "ss":
 			draw(userChoice, computerChoice);
 			break;
+	}
+	if (userScore === "10") {
+		alert("YOU HAVE WON THIS ROUND!!!🔥")
+	}
+	if (computerScore === "10") {
+		alert("You lost this round....😢")
 	}
 }
 
