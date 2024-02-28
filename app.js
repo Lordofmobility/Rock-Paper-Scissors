@@ -75,7 +75,12 @@ function game(userChoice) {
 			draw(userChoice, computerChoice);
 			break;
 	}
-	win_game()
+	if (userScore === "10") {
+		alert("YOU HAVE WON THIS ROUND!!!🔥")
+	}
+	if (computerScore === "10") {
+		alert("You lost this round....😢")
+	}
 }
 
 function main() {
@@ -91,13 +96,5 @@ function main() {
 		game('s');
 	})
 }
-
-function win_game() {
-	if (userScore == 10) {
-		result_p.innerHTML = `You have won the game!!!`
-	}
- 	if (computerScore == 10)
-		result_p.innerHTML = `You have lost this round`
-	}
 
 main();
